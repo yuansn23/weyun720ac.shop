@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<script>
+function g2() {
+   window.open('https://wa.me/your-number', '_blank');
+        }
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Konsultasi Profesional Pemulihan Aset Digital</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #1a73e8;
+            --secondary-color: #34a853;
+            --accent-color: #ff6b35;
+            --dark-blue: #0d47a1;
+            --light-gray: #f8f9fa;
+            --text-dark: #2c3e50;
+            --gold: #ffd700;
+            --white: #ffffff;
+            --shadow: 0 4px 20px rgba(26, 115, 232, 0.15);
+            --gradient-main: linear-gradient(135deg, #1a73e8 0%, #4285f4 100%);
+            --gradient-accent: linear-gradient(135deg, #ff6b35 0%, #ff8a50 100%);
+            --success-green: #28a745;
+            --warning-orange: #fd7e14;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .hero-section {
+            background: var(--gradient-main);
+            color: var(--white);
+            padding: 80px 0;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.3);
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-title {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-shadow: 3px 3px 6px rgba(0,0,0,0.8);
+            background: rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            border-radius: 15px;
+            display: inline-block;
+        }
+
+        .hero-subtitle {
+            font-size: 1.4rem;
+            margin-bottom: 30px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+            background: rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            border-radius: 10px;
+            line-height: 1.6;
+        }
+
+        .cta-button {
+            background: var(--gradient-accent);
+            color: var(--white);
+            padding: 18px 40px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: var(--shadow);
+            display: inline-block;
+            text-decoration: none;
+            margin: 10px;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(255, 107, 53, 0.4);
+        }
+
+        .cta-button-primary {
+            background: var(--gradient-main);
+            font-size: 1.3rem;
+            padding: 20px 50px;
+        }
+
+        .section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            font-size: 2.8rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 50px;
+            color: var(--dark-blue);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+
+        .service-card {
+            background: var(--white);
+            padding: 40px 30px;
+            border-radius: 20px;
+            box-shadow: var(--shadow);
+            text-align: center;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 40px rgba(26, 115, 232, 0.2);
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+
+        .service-title {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: var(--dark-blue);
+        }
+
+        .stats-section {
+            background: var(--light-gray);
+            text-align: center;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+        }
+
+        .stat-item {
+            padding: 30px 20px;
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+
+        .stat-label {
+            font-size: 1.1rem;
+            color: var(--text-dark);
+        }
+
+        .cases-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+
+        .case-card {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 15px;
+            border-left: 5px solid var(--secondary-color);
+            box-shadow: var(--shadow);
+        }
+
+        .case-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--dark-blue);
+            margin-bottom: 10px;
+        }
+
+        .case-number {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--secondary-color);
+        }
+
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .step-card {
+            background: var(--white);
+            padding: 40px 30px;
+            border-radius: 20px;
+            box-shadow: var(--shadow);
+            text-align: center;
+            position: relative;
+        }
+
+        .step-number {
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--gradient-main);
+            color: var(--white);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+
+        .floating-button {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--gradient-accent);
+            color: var(--white);
+            padding: 15px 50px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            box-shadow: 0 4px 20px rgba(255, 107, 53, 0.4);
+            z-index: 1000;
+            animation: breathe 2s ease-in-out infinite;
+        }
+
+        @keyframes breathe {
+            0%, 100% { transform: translateX(-50%) scale(1); }
+            50% { transform: translateX(-50%) scale(1.05); }
+        }
+
+        .disclaimer-section {
+            background: #2c3e50;
+            color: var(--white);
+            padding: 50px 0;
+            font-size: 0.9rem;
+            line-height: 1.8;
+        }
+
+        .disclaimer-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: var(--accent-color);
+        }
+
+        .footer {
+            background: #1a252f;
+            color: var(--white);
+            padding: 30px 0;
+            text-align: center;
+        }
+
+        .footer-links {
+            margin-bottom: 20px;
+        }
+
+        .footer-links a {
+            color: var(--white);
+            text-decoration: none;
+            margin: 0 20px;
+            opacity: 0.8;
+            transition: opacity 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            opacity: 1;
+        }
+
+        .image-container {
+            text-align: center;
+            margin: 40px 0;
+        }
+
+        .section-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+        }
+
+        /* Marketing Elements */
+        .trust-badge {
+            display: inline-block;
+            background: var(--success-green);
+            color: var(--white);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin: 5px;
+        }
+
+        .urgency-banner {
+            background: var(--warning-orange);
+            color: var(--white);
+            text-align: center;
+            padding: 12px 0;
+            font-weight: 600;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .urgency-banner::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            animation: shine 3s ease-in-out infinite;
+        }
+
+        @keyframes shine {
+            0% { left: -100%; }
+            50% { left: 100%; }
+            100% { left: 100%; }
+        }
+
+        .testimonial-section {
+            background: var(--light-gray);
+            padding: 60px 0;
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .testimonial-card {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+            text-align: center;
+        }
+
+        .testimonial-stars {
+            color: var(--gold);
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+
+        .testimonial-author {
+            font-weight: 600;
+            color: var(--dark-blue);
+        }
+
+        .guarantee-box {
+            background: linear-gradient(135deg, #e8f5e8 0%, #f0f8f0 100%);
+            border: 2px solid var(--success-green);
+            border-radius: 15px;
+            padding: 30px;
+            margin: 30px 0;
+            text-align: center;
+        }
+
+        .guarantee-title {
+            color: var(--success-green);
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .free-consultation-badge {
+            background: var(--gradient-accent);
+            color: var(--white);
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-weight: 600;
+            display: inline-block;
+            margin: 10px 0;
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        .social-proof {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .social-proof-item {
+            display: inline-block;
+            margin: 0 15px;
+            padding: 8px 16px;
+            background: rgba(26, 115, 232, 0.1);
+            border-radius: 20px;
+            font-size: 0.9rem;
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+
+        .limited-time {
+            background: var(--gradient-accent);
+            color: var(--white);
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .limited-time h3 {
+            margin-bottom: 10px;
+            font-size: 1.3rem;
+        }
+
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.5rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.2rem;
+            }
+            
+            .section-title {
+                font-size: 2.2rem;
+            }
+            
+            .container {
+                padding: 0 15px;
+            }
+            
+            .section {
+                padding: 50px 0;
+            }
+            
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
+            
+            .floating-button {
+                padding: 12px 30px;
+                font-size: 1rem;
+            }
+
+            .social-proof-item {
+                display: block;
+                margin: 5px 0;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-title {
+                font-size: 2rem;
+            }
+            
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .stat-number {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Urgency Banner -->
+   
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Punya masalah dan butuh bantuan hukum?</h1>
+                
+                <div class="image-container" style="margin: 30px 0;">
+                    <img src="img/1.jpg" alt="Konsultasi Profesional Pemulihan Aset Digital" class="section-image">
+                </div>
+                
+                <p class="hero-subtitle">
+                    Dalam investasi saham, emas, reksa dana, dan mata uang kripto, jika Anda mengalami penipuan, 
+                    Anda mungkin menghadapi risiko kehilangan dana. Kami menyediakan konsultasi hukum yang sah 
+                    dan layanan analisis transaksi blockchain untuk membantu Anda mengeksplorasi kemungkinan jalur pemulihan hak.
+                </p>
+                
+               
+ 
+                <br>
+                <button class="cta-button cta-button-primary" onclick="g2()">Mulai Konsultasi Gratis</button>
+                
+                <div style="margin-top: 20px;">
+                    <span class="trust-badge">✓ 100% Kerahasiaan Terjamin</span>
+                    <span class="trust-badge">✓ Tanpa Biaya Awal</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Layanan Kami Meliputi</h2>
+            
+            <div class="image-container">
+                <img src="img/2.jpg" alt="Layanan Profesional Kami" class="section-image">
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">🔍</div>
+                    <h3 class="service-title">Analisis Pelacakan Transaksi Berbasis Blockchain</h3>
+                    <p>Teknologi canggih untuk melacak jejak transaksi digital Anda dengan tingkat akurasi tinggi</p>
+                    <div style="margin-top: 15px;">
+                        <span class="trust-badge">✓ Teknologi Terdepan</span>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">⚖️</div>
+                    <h3 class="service-title">Bimbingan Penasihat Hukum</h3>
+                    <p>Panduan laporan dan proses peradilan dari ahli hukum berpengalaman lebih dari 10 tahun</p>
+                    <div style="margin-top: 15px;">
+                        <span class="trust-badge">✓ Ahli Bersertifikat</span>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🌐</div>
+                    <h3 class="service-title">Bantuan Pemulihan Aset Lintas Batas</h3>
+                    <p>Dukungan kepatuhan untuk kasus internasional dengan jaringan global</p>
+                    <div style="margin-top: 15px;">
+                        <span class="trust-badge">✓ Jaringan Global</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="guarantee-box">
+                <h3 class="guarantee-title">🛡️ Jaminan Keamanan & Kerahasiaan</h3>
+                <p>Semua informasi klien dijaga ketat sesuai standar internasional. Konsultasi awal 100% gratis tanpa kewajiban.</p>
+            </div>
+            
+            <div style="text-align: center;">
+                <button class="cta-button" onclick="g2()">Dapatkan Evaluasi Objektif Gratis</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="section stats-section">
+        <div class="container">
+            <h2 class="section-title">Pencapaian & Kepercayaan Klien</h2>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number">80+</div>
+                    <div class="stat-label">Kantor Cabang</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">380+</div>
+                    <div class="stat-label">Penghargaan Resmi</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">2500+</div>
+                    <div class="stat-label">Tim Profesional</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">96.8%</div>
+                    <div class="stat-label">Tingkat Kepuasan</div>
+                </div>
+            </div>
+ 
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonial-section">
+        <div class="container">
+            <h2 class="section-title">Testimoni Klien</h2>
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">"Tim sangat profesional dan membantu saya memahami proses hukum. Pelayanan 24 jam sangat membantu."</p>
+                    <p class="testimonial-author">- Budi S., Jakarta</p>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">"Konsultasi gratis memberikan clarity yang saya butuhkan. Analisis blockchain mereka sangat detail."</p>
+                    <p class="testimonial-author">- Sari M., Surabaya</p>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">"Proses transparan dan tidak ada biaya tersembunyi. Sangat merekomendasikan layanan ini."</p>
+                    <p class="testimonial-author">- Ahmad R., Bandung</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cases Section -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Bidang Keahlian Kami</h2>
+            <p style="text-align: center; font-size: 1.2rem; margin-bottom: 40px;">
+                Apakah Anda korban kasus penipuan? Hubungi kami segera, kami menyediakan solusi pemulihan kerugian dan layanan kompensasi:
+            </p>
+            
+            <div class="image-container">
+                <img src="img/3.jpg" alt="Portfolio Kasus Sukses" class="section-image">
+            </div>
+            
+            <div class="cases-grid">
+                <div class="case-card">
+                    <h3 class="case-title">Penipuan Mata Uang Kripto</h3>
+                    <div class="case-number">Kasus Ditangani: 5.100+</div>
+                    <p style="margin-top: 10px; font-size: 0.9rem; color: var(--success-green);">✓ Tingkat Penyelesaian Tinggi</p>
+                </div>
+                <div class="case-card">
+                    <h3 class="case-title">Pekerjaan Sampingan Paksa</h3>
+                    <div class="case-number">Kasus Ditangani: 18.000+</div>
+                    <p style="margin-top: 10px; font-size: 0.9rem; color: var(--success-green);">✓ Pengalaman Terpercaya</p>
+                </div>
+                <div class="case-card">
+                    <h3 class="case-title">Penipuan Kencan Online</h3>
+                    <div class="case-number">Kasus Ditangani: 3.200+</div>
+                    <p style="margin-top: 10px; font-size: 0.9rem; color: var(--success-green);">✓ Pendekatan Sensitif</p>
+                </div>
+                <div class="case-card">
+                    <h3 class="case-title">Penipuan Kartu Hadiah</h3>
+                    <div class="case-number">Kasus Ditangani: 4.500+</div>
+                    <p style="margin-top: 10px; font-size: 0.9rem; color: var(--success-green);">✓ Proses Cepat</p>
+                </div>
+                <div class="case-card">
+                    <h3 class="case-title">Penipuan Investasi Keuangan</h3>
+                    <div class="case-number">Kasus Ditangani: 12.000+</div>
+                    <p style="margin-top: 10px; font-size: 0.9rem; color: var(--success-green);">✓ Keahlian Khusus</p>
+                </div>
+                <div class="case-card">
+                    <h3 class="case-title">Jenis Penipuan Lainnya</h3>
+                    <div class="case-number">Konsultasi Tersedia</div>
+                    <p style="margin-top: 10px; font-size: 0.9rem; color: var(--primary-color);">📞 Hubungi Sekarang</p>
+                </div>
+            </div>
+            
+            <div style="text-align: center;">
+                <button class="cta-button" onclick="g2()">Konsultasi Kasus Anda Gratis</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="section stats-section">
+        <div class="container">
+            <h2 class="section-title">Tim Profesional Berpengalaman</h2>
+            <div style="max-width: 800px; margin: 0 auto; text-align: center; font-size: 1.1rem; line-height: 1.8;">
+                <p>Tim kami terdiri dari elit lulusan fakultas hukum terkemuka dalam dan luar negeri, dengan dasar teoritis yang solid dan pengalaman praktis yang kaya. Kami tidak hanya memberikan pendapat profesional, tetapi juga berusaha memberikan perspektif penilaian yang komprehensif kepada klien.</p>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Alur Layanan Profesional</h2>
+            <div class="process-steps">
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <h3 class="service-title">Konsultasi Awal Gratis</h3>
+                    <p>Berkomunikasi dengan tim dukungan online kami 24/7, bagikan situasi Anda, dan dapatkan analisis awal tanpa biaya.</p>
+                    <div style="margin-top: 15px;">
+                        <span style="color: var(--success-green); font-weight: 600;">⏱️ Respons dalam 30 menit</span>
+                    </div>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <h3 class="service-title">Analisis Mendalam</h3>
+                    <p>Tim ahli melakukan analisis komprehensif terhadap kasus Anda dengan teknologi blockchain terdepan.</p>
+                    <div style="margin-top: 15px;">
+                        <span style="color: var(--success-green); font-weight: 600;">🔒 100% Rahasia</span>
+                    </div>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <h3 class="service-title">Strategi Hukum</h3>
+                    <p>Tim pengacara menyusun strategi terbaik dan mendampingi Anda dalam setiap langkah proses hukum.</p>
+                    <div style="margin-top: 15px;">
+                        <span style="color: var(--success-green); font-weight: 600;">⚖️ Pendampingan Penuh</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="image-container">
+                <img src="img/4.jpg" alt="Proses Layanan Profesional" class="section-image">
+            </div>
+            
+            <div style="text-align: center; margin-top: 40px;">
+                <button class="cta-button" onclick="g2()">Mulai Proses Sekarang</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="hero-content">
+                <h2 style="font-size: 2.5rem; margin-bottom: 20px;">Jangan Biarkan Kerugian Anda Berlanjut!</h2>
+                <p style="font-size: 1.3rem; margin-bottom: 30px;">
+                    Setiap hari yang terlewat mengurangi peluang pemulihan. Hubungi tim ahli kami sekarang untuk konsultasi gratis dan mulai proses pemulihan dana Anda.
+                </p>
+                
+                <div style="margin-bottom: 30px;">
+                    <span class="trust-badge">⚡ Konsultasi Gratis</span>
+                    <span class="trust-badge">📞 Respons 24 Jam</span>
+                    <span class="trust-badge">🛡️ Tanpa Risiko</span>
+                </div>
+                
+                <button class="cta-button cta-button-primary" onclick="g2()">Klaim Konsultasi Gratis Sekarang</button>
+                
+                <p style="margin-top: 20px; font-size: 1rem; opacity: 0.9;">
+                    💡 Konsultasi gratis terbatas - Hanya untuk 50 pendaftar pertama hari ini
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Floating Button -->
+    <button class="floating-button" onclick="g2()">💬 Konsultasi Gratis Sekarang</button>
+
+    <!-- Disclaimer Section -->
+    <section class="disclaimer-section">
+        <div class="container">
+            <h3 class="disclaimer-title">⚠️ Peringatan Risiko Penting</h3>
+            <ul style="list-style: none; padding-left: 0;">
+                    <li>Informasi yang diberikan di situs web ini hanya merupakan pengetahuan hukum umum dan bukan merupakan nasihat hukum profesional. Setiap kasus berbeda, silakan berkonsultasi dengan pengacara berlisensi untuk mendapatkan nasihat hukum untuk situasi pribadi Anda.</li>
+                    <li>Keberhasilan kasus-kasus sebelumnya tidak berarti hasil yang sama. Hasil dari kasus hukum dipengaruhi oleh banyak faktor, dan kami tidak menjamin hasil tertentu</li> 
+                
+            </ul>
+             
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-links">
+                <a href="privacy.html" target="_blank">Kebijakan Privasi</a>
+                <a href="terms.html" target="_blank">Perjanjian Pengguna</a>
+            </div>
+            <p>&copy; 2025 Konsultasi Profesional Pemulihan Aset Digital. Semua hak dilindungi.</p>
+            <p style="font-size: 0.8rem; margin-top: 10px; opacity: 0.7;">
+                Layanan berlisensi resmi • Kepatuhan penuh terhadap regulasi • Perlindungan data terjamin
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        
+
+        // Dark mode detection
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            document.documentElement.classList.add('dark');
+        }
+        
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
+            if (event.matches) {
+                document.documentElement.classList.add('dark');
+            } else {
+                document.documentElement.classList.remove('dark');
+            }
+        });
+
+        // Smooth scrolling for better UX
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
